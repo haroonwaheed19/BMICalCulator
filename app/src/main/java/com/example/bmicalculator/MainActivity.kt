@@ -1,15 +1,13 @@
 package com.example.bmicalculator
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.cardview.widget.CardView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var weightText: EditText
@@ -21,17 +19,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var clearBtn: Button
     private lateinit var weightSpinner: Spinner
     private lateinit var heightSpinner: Spinner
+    private lateinit var cvVisibility: CardView // Changed from EditText to CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Ensure the view with ID 'main' exists in the layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         // Initialize views
         weightText = findViewById(R.id.etWeight)
         heightText = findViewById(R.id.etHeight)
@@ -42,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         clearBtn = findViewById(R.id.btnClear)
         heightSpinner = findViewById(R.id.heightSpinner)
         weightSpinner = findViewById(R.id.weightSpinner)
+        cvVisibility = findViewById(R.id.cvResult) // Initialize as CardView
 
         // Clear button functionality
         clearBtn.setOnClickListener {
@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
             result.text = ""
             description.text = ""
             info.text = ""
+            cvVisibility.visibility = View.GONE
         }
 
         // Calculate button functionality
@@ -67,41 +68,43 @@ class MainActivity : AppCompatActivity() {
                             displayResult(bmi)
                         }
 
-                        weightSpinner.selectedItem == "Pounds" && heightSpinner.selectedItem == "Cm"-> {
+                        weightSpinner.selectedItem == "Pounds" && heightSpinner.selectedItem == "Cm" -> {
                             val res = convertToKg(weight)
                             val bmi = calculateBMI(res, height)
                             displayResult(bmi)
                         }
+
                         heightSpinner.selectedItem == "M" && weightSpinner.selectedItem == "Pounds" -> {
                             val res = convertToKg(weight)
                             var bmi = res / (height * height)
                             bmi = String.format("%.2f", bmi).toFloat()
                             displayResult(bmi)
                         }
+
                         heightSpinner.selectedItem == "M" && weightSpinner.selectedItem == "Kg" -> {
                             var bmi = weight / (height * height)
                             bmi = String.format("%.2f", bmi).toFloat()
                             displayResult(bmi)
                         }
                     }
-                }else {
+                } else {
                     Toast.makeText(this, "Invalid input", Toast.LENGTH_LONG).show()
                 }
             }
         }
     }
 
-    private fun convertToKg(weight:Float): Float
-    {
-        val kg = weight * 0.45359237f
-        return kg
+    private fun convertToKg(weight: Float): Float {
+        return weight * 0.45359237f
     }
+
     private fun calculateBMI(weight: Float, height: Float): Float {
         val heightValue = height / 100
         var bmi = weight / (heightValue * heightValue)
         bmi = String.format("%.2f", bmi).toFloat()
         return bmi
     }
+
     private fun validateInput(weight: String?, height: String?): Boolean {
         return when {
             weight.isNullOrEmpty() -> {
@@ -119,6 +122,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun displayResult(bmi: Float) {
+        cvVisibility.visibility = View.VISIBLE // Set CardView visibility to visible
         val infoText = "Normal range is 18.50 - 24.99"
 
         result.text = bmi.toString()
