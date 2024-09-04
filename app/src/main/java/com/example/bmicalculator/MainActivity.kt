@@ -3,6 +3,7 @@ package com.example.bmicalculator
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var info: TextView
     private lateinit var calculateBtn: Button
     private lateinit var clearBtn: Button
+    private lateinit var weightSpinner: Spinner
+    private lateinit var heightSpinner: Spinner
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         info = findViewById(R.id.tvInfo)
         calculateBtn = findViewById(R.id.btCalculate)
         clearBtn = findViewById(R.id.btnClear)
+        heightSpinner = findViewById(R.id.heightSpinner)
+        weightSpinner = findViewById(R.id.weightSpinner)
 
         // Clear button functionality
         clearBtn.setOnClickListener {
@@ -54,19 +60,42 @@ class MainActivity : AppCompatActivity() {
             if (validateInput(weightStr, heightStr)) {
                 val weight = weightStr.toFloatOrNull()
                 val height = heightStr.toFloatOrNull()
-
                 if (weight != null && height != null && weight > 0 && height > 0) {
-                    val heightValue = height / 100
-                    var bmi = weight / (heightValue * heightValue)
-                    bmi = String.format("%.2f", bmi).toFloat()
-                    displayResult(bmi)
-                } else {
+                    when {
+                        weightSpinner.selectedItem == "Kg" && heightSpinner.selectedItem == "Cm" -> {
+                            val bmi = calculateBMI(weight, height)
+                            displayResult(bmi)
+                        }
+
+                        weightSpinner.selectedItem == "Pounds" -> {
+                            val res = convertToKg(weight)
+                            val bmi = calculateBMI(res, height)
+                            displayResult(bmi)
+                        }
+                        heightSpinner.selectedItem == "M" -> {
+                            val h = height * 100
+                            val bmi = calculateBMI(weight, height)
+                            displayResult(bmi)
+                        }
+                    }
+                }else {
                     Toast.makeText(this, "Invalid input", Toast.LENGTH_LONG).show()
                 }
             }
         }
     }
 
+    private fun convertToKg(weight:Float): Float
+    {
+        val kg = weight * 0.45359237f
+        return kg
+    }
+    private fun calculateBMI(weight: Float, height: Float): Float {
+        val heightValue = height / 100
+        var bmi = weight / (heightValue * heightValue)
+        bmi = String.format("%.2f", bmi).toFloat()
+        return bmi
+    }
     private fun validateInput(weight: String?, height: String?): Boolean {
         return when {
             weight.isNullOrEmpty() -> {

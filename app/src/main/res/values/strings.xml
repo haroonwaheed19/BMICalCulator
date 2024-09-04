@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">BMI CalCulator</string>
+    <string-array name="weight_units">
+        <item>Kg</item>
+        <item>Pounds</item>
+    </string-array>
+
+    <string-array name="height_units">
+        <item>Cm</item>
+        <item>M</item>
+    </string-array>
 </resources>
