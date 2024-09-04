@@ -67,14 +67,20 @@ class MainActivity : AppCompatActivity() {
                             displayResult(bmi)
                         }
 
-                        weightSpinner.selectedItem == "Pounds" -> {
+                        weightSpinner.selectedItem == "Pounds" && heightSpinner.selectedItem == "Cm"-> {
                             val res = convertToKg(weight)
                             val bmi = calculateBMI(res, height)
                             displayResult(bmi)
                         }
-                        heightSpinner.selectedItem == "M" -> {
-                            val h = height * 100
-                            val bmi = calculateBMI(weight, height)
+                        heightSpinner.selectedItem == "M" && weightSpinner.selectedItem == "Pounds" -> {
+                            val res = convertToKg(weight)
+                            var bmi = res / (height * height)
+                            bmi = String.format("%.2f", bmi).toFloat()
+                            displayResult(bmi)
+                        }
+                        heightSpinner.selectedItem == "M" && weightSpinner.selectedItem == "Kg" -> {
+                            var bmi = weight / (height * height)
+                            bmi = String.format("%.2f", bmi).toFloat()
                             displayResult(bmi)
                         }
                     }
