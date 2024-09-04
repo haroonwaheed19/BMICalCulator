@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         // Initialize views
-        weightText = findViewById(R.id.etWeight)
-        heightText = findViewById(R.id.etHeight)
+        weightText = findViewById(R.id.tndWeight)
+        heightText = findViewById(R.id.tndHeight)
         result = findViewById(R.id.tvResultIndex)
         description = findViewById(R.id.tvResult)
         info = findViewById(R.id.tvInfo)
