@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         // Initialize views
-        weightText = findViewById(R.id.tndWeight)
-        heightText = findViewById(R.id.tndHeight)
+        weightText = findViewById(R.id.etWeight)
+        heightText = findViewById(R.id.etHeight)
         result = findViewById(R.id.tvResultIndex)
         description = findViewById(R.id.tvResult)
         info = findViewById(R.id.tvInfo)
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun displayResult(bmi: Float) {
-        val infoText = "Normal range is 18.5 - 24.9"
+        val infoText = "Normal range is 18.50 - 24.99"
 
         result.text = bmi.toString()
         info.text = infoText
