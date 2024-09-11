@@ -19,10 +19,10 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvWeight"
-                android:layout_width="@dimen/dim_365"
-                android:layout_height="@dimen/dim_154"
+                android:layout_width="@dimen/dim_310"
+                android:layout_height="@dimen/dim_140"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/dim_130"
+                android:layout_marginTop="@dimen/dim_50"
                 android:animateLayoutChanges="false"
                 app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="@dimen/dim_20"
@@ -38,30 +38,31 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Weight"
+                        android:padding="@dimen/dim_5"
                         android:textColor="@color/text_Hint"
-                        android:textSize="@dimen/font_size_24"
+                        android:textSize="@dimen/font_size_22"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.09"
+                        app:layout_constraintHorizontal_bias="0.15"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.204" />
+                        app:layout_constraintVertical_bias="0.22" />
 
                     <EditText
                         android:id="@+id/etWeight"
-                        android:layout_width="@dimen/dim_180"
-                        android:layout_height="@dimen/dim_80"
+                        android:layout_width="@dimen/dim_160"
+                        android:layout_height="@dimen/dim_75"
                         android:ems="10"
                         android:hint="0"
                         android:inputType="numberDecimal"
                         android:textColor="@color/amber"
                         android:textColorHint="@color/blue_50"
-                        android:textSize="@dimen/font_size_50"
+                        android:textSize="@dimen/font_size_30"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.126"
+                        app:layout_constraintHorizontal_bias="0.22"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.783" />
@@ -80,7 +81,7 @@
                         android:textAlignment="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.72"
+                        app:layout_constraintHorizontal_bias="0.87"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.85" />
@@ -90,20 +91,15 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvHeight"
-                android:layout_width="@dimen/dim_365"
-                android:layout_height="@dimen/dim_154"
+                android:layout_width="@dimen/dim_310"
+                android:layout_height="@dimen/dim_140"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/dim_30"
+                android:layout_marginTop="@dimen/dim_15"
+                android:animateLayoutChanges="false"
                 app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="@dimen/dim_20"
                 app:cardElevation="@dimen/dim_15"
-                app:cardMaxElevation="@dimen/dim_15"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.32">
+                app:cardMaxElevation="@dimen/dim_15">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -114,30 +110,31 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Height"
+                        android:padding="@dimen/dim_5"
                         android:textColor="@color/text_Hint"
-                        android:textSize="@dimen/font_size_24"
+                        android:textSize="@dimen/font_size_22"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.09"
+                        app:layout_constraintHorizontal_bias="0.15"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.204" />
+                        app:layout_constraintVertical_bias="0.22" />
 
                     <EditText
                         android:id="@+id/etHeight"
-                        android:layout_width="@dimen/dim_180"
-                        android:layout_height="@dimen/dim_80"
+                        android:layout_width="@dimen/dim_160"
+                        android:layout_height="@dimen/dim_75"
                         android:ems="10"
                         android:hint="0"
                         android:inputType="numberDecimal"
                         android:textColor="@color/amber"
                         android:textColorHint="@color/blue_50"
-                        android:textSize="@dimen/font_size_50"
+                        android:textSize="@dimen/font_size_30"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.126"
+                        app:layout_constraintHorizontal_bias="0.22"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.783" />
@@ -156,7 +153,7 @@
                         android:textAlignment="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.72"
+                        app:layout_constraintHorizontal_bias="0.87"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.85" />
@@ -166,7 +163,7 @@
 
             <Button
                 android:id="@+id/btCalculate"
-                android:layout_width="@dimen/dim_278"
+                android:layout_width="@dimen/dim_170"
                 android:layout_height="@dimen/dim_69"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dim_10"
@@ -177,18 +174,13 @@
                 android:textColorLink="@color/purple"
                 android:textSize="@dimen/font_size_24"
                 android:textStyle="bold"
-                app:cornerRadius="@dimen/dim_20"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.55" />
+                app:cornerRadius="@dimen/dim_20" />
 
             <Button
                 android:id="@+id/btnClear"
-                android:layout_width="@dimen/dim_161"
-                android:layout_height="@dimen/dim_53"
+                android:layout_width="@dimen/dim_110"
+                android:layout_height="@dimen/dim_55"
+                android:padding="@dimen/dim_5"
                 android:layout_gravity="center_horizontal"
                 android:backgroundTint="@color/red"
                 android:text="Clear"
@@ -196,31 +188,20 @@
                 android:textColorLink="@color/red"
                 android:textSize="@dimen/font_size_25"
                 android:textStyle="bold"
-                app:cornerRadius="@dimen/dim_20"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.48000002" />
+                app:cornerRadius="@dimen/dim_20" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvResult"
-                android:layout_width="@dimen/dim_363"
-                android:layout_height="@dimen/dim_264"
+                android:layout_width="@dimen/dim_310"
+                android:layout_height="@dimen/dim_200"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dim_5"
-                android:layout_marginBottom="@dimen/dim_50"
+                android:layout_marginBottom="@dimen/dim_1"
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/card_background"
                 app:cardCornerRadius="@dimen/dim_20"
                 app:cardElevation="@dimen/dim_15"
-                app:cardMaxElevation="@dimen/dim_15"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.87">
+                app:cardMaxElevation="@dimen/dim_15">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -231,11 +212,11 @@
                         android:id="@+id/tvRes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingStart="@dimen/dim_15"
-                        android:paddingTop="@dimen/dim_15"
+                        android:paddingStart="@dimen/dim_18"
+                        android:padding="@dimen/dim_8"
                         android:text="Result:"
                         android:textColor="@color/amber"
-                        android:textSize="@dimen/font_size_34"
+                        android:textSize="@dimen/font_size_30"
                         android:textStyle="bold" />
 
                     <TextView
@@ -244,7 +225,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/font_size_60"
+                        android:textSize="@dimen/font_size_30"
                         android:textStyle="bold" />
 
                     <TextView
@@ -253,17 +234,17 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:textColor="@color/dark_green"
-                        android:textSize="@dimen/font_size_34"
+                        android:textSize="@dimen/font_size_30"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvInfo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingTop="@dimen/dim_20"
+                        android:padding="@dimen/dim_10"
                         android:textAlignment="center"
                         android:textColor="@color/amber"
-                        android:textSize="@dimen/font_size_25"
+                        android:textSize="@dimen/font_size_20"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
