@@ -126,8 +126,15 @@ class MainActivity : AppCompatActivity() {
             weightStr: String,
             heightStr: String
     ): Boolean {
-        if (weightStr.isEmpty() || heightStr.isEmpty()) {
-            weightText.error = "Enter valid values"
+        if (weightStr.isEmpty() && heightStr.isEmpty()) {
+            weightText.error = "Enter valid weight values"
+            heightText.error = "Enter valid height values"
+            return false
+        } else if (weightStr.isEmpty()) {
+            weightText.error = "Enter valid weight values"
+            return false
+        } else if (heightStr.isEmpty()) {
+            heightText.error = "Enter valid height values"
             return false
         }
         return true
