@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">BMI CalCulator</string>
+    <string name="underweight">You are below the normal weight range.</string>
+    <string name="normal">You are within the normal weight range.</string>
+    <string name="overweight">You are above the normal weight range.</string>
+    <string name="obese">You are in the obese weight range.</string>
     <string-array name="weight_units">
         <item>Kg</item>
         <item>Pounds</item>
     </string-array>
 
     <string-array name="height_units">
+        <item>Ft/In</item>
         <item>Cm</item>
         <item>M</item>
     </string-array>

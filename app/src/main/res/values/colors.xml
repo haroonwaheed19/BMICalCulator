@@ -91,8 +91,12 @@
     <color name="success">#FF4CAF50</color>
 
 
-
     <color name="card_background">#353A55</color>
     <color name="layout_background">#1B1F3B</color>
     <color name="text_Hint">#FFC107</color>
+    <color name="under_weight">#E9DF6F</color>
+    <color name="Obese">#DC143C</color>
+    <color name="OVERWEIGHT">#FF8C00</color>
+
+
 </resources>

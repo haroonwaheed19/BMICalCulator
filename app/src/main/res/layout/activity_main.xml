@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -15,11 +16,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvWeight"
-                android:layout_width="@dimen/dim_310"
+                android:layout_width="@dimen/dim_313"
                 android:layout_height="@dimen/dim_140"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dim_50"
@@ -37,8 +38,8 @@
                         android:id="@+id/tvWeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Weight"
                         android:padding="@dimen/dim_5"
+                        android:text="Weight"
                         android:textColor="@color/text_Hint"
                         android:textSize="@dimen/font_size_22"
                         android:textStyle="bold"
@@ -51,14 +52,14 @@
 
                     <EditText
                         android:id="@+id/etWeight"
-                        android:layout_width="@dimen/dim_160"
+                        android:layout_width="@dimen/dim_172"
                         android:layout_height="@dimen/dim_75"
-                        android:ems="10"
-                        android:hint="0"
+                        android:contentDescription="Enter your Weight"
+                        android:ems="15"
                         android:inputType="numberDecimal"
-                        android:textColor="@color/amber"
-                        android:textColorHint="@color/blue_50"
-                        android:textSize="@dimen/font_size_30"
+                        android:textColor="@color/blue_50"
+                        android:textColorHint="@color/grey_700"
+                        android:textSize="@dimen/font_size_25"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -69,9 +70,9 @@
 
                     <Spinner
                         android:id="@+id/weightSpinner"
-                        android:layout_width="@dimen/dim_85"
+                        android:layout_width="@dimen/dim_94"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/amber"
+                        android:backgroundTint="@color/grey_100"
                         android:entries="@array/weight_units"
                         android:minHeight="@dimen/dim_65"
                         android:paddingTop="@dimen/dim_10"
@@ -81,7 +82,7 @@
                         android:textAlignment="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.87"
+                        app:layout_constraintHorizontal_bias="0.95"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.85" />
@@ -91,7 +92,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvHeight"
-                android:layout_width="@dimen/dim_310"
+                android:layout_width="@dimen/dim_313"
                 android:layout_height="@dimen/dim_140"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dim_15"
@@ -109,8 +110,8 @@
                         android:id="@+id/tvHeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Height"
                         android:padding="@dimen/dim_5"
+                        android:text="Height"
                         android:textColor="@color/text_Hint"
                         android:textSize="@dimen/font_size_22"
                         android:textStyle="bold"
@@ -123,14 +124,14 @@
 
                     <EditText
                         android:id="@+id/etHeight"
-                        android:layout_width="@dimen/dim_160"
+                        android:layout_width="@dimen/dim_172"
                         android:layout_height="@dimen/dim_75"
-                        android:ems="10"
-                        android:hint="0"
+                        android:contentDescription="Enter your height"
+                        android:ems="12"
                         android:inputType="numberDecimal"
-                        android:textColor="@color/amber"
-                        android:textColorHint="@color/blue_50"
-                        android:textSize="@dimen/font_size_30"
+                        android:textColor="@color/blue_50"
+                        android:textColorHint="@color/grey_700"
+                        android:textSize="@dimen/font_size_25"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -141,9 +142,9 @@
 
                     <Spinner
                         android:id="@+id/heightSpinner"
-                        android:layout_width="@dimen/dim_85"
+                        android:layout_width="@dimen/dim_94"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/amber"
+                        android:backgroundTint="@color/grey_100"
                         android:entries="@array/height_units"
                         android:minHeight="@dimen/dim_65"
                         android:paddingTop="@dimen/dim_10"
@@ -153,7 +154,7 @@
                         android:textAlignment="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.87"
+                        app:layout_constraintHorizontal_bias="0.95"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.85" />
@@ -180,9 +181,9 @@
                 android:id="@+id/btnClear"
                 android:layout_width="@dimen/dim_110"
                 android:layout_height="@dimen/dim_55"
-                android:padding="@dimen/dim_5"
                 android:layout_gravity="center_horizontal"
                 android:backgroundTint="@color/red"
+                android:padding="@dimen/dim_5"
                 android:text="Clear"
                 android:textColor="@android:color/white"
                 android:textColorLink="@color/red"
@@ -192,8 +193,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvResult"
-                android:layout_width="@dimen/dim_310"
-                android:layout_height="@dimen/dim_200"
+                android:layout_width="@dimen/dim_320"
+                android:layout_height="@dimen/dim_220"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dim_5"
                 android:layout_marginBottom="@dimen/dim_1"
@@ -212,8 +213,8 @@
                         android:id="@+id/tvRes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingStart="@dimen/dim_18"
                         android:padding="@dimen/dim_8"
+                        android:paddingStart="@dimen/dim_18"
                         android:text="Result:"
                         android:textColor="@color/amber"
                         android:textSize="@dimen/font_size_30"
@@ -234,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:textColor="@color/dark_green"
-                        android:textSize="@dimen/font_size_30"
+                        android:textSize="@dimen/font_size_25"
                         android:textStyle="bold" />
 
                     <TextView

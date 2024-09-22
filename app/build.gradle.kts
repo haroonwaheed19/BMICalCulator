@@ -6,17 +6,17 @@ plugins {
 android {
     namespace = "com.example.bmicalculator"
     compileSdk = 34
-
+    
     defaultConfig {
         applicationId = "com.example.bmicalculator"
         minSdk = 22
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
+        
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-
+    
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
